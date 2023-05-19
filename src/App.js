@@ -3,15 +3,18 @@
 function App() {
   return (
     <div className="App">
-       <button url="#">
+       <button type="button">
           Статьи 
        </button>
-       <button url="#">
+       <button type="button">
           Тесты 
        </button>
-       <button url="#">
+       <button type="button">
           Игры
        </button>
+
+       <a href="#">Ссылка на тесты</a>
+       <a href="#">Ссылка на игры</a>
     </div>
   );
 }
