@@ -1,0 +1,37 @@
+.logo {
+    background-color: rgb(70, 56, 110);
+    width: 400px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+}
+a{
+    text-decoration:none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.logo-text{
+    font-size:50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    font-family: monospace;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    margin-top: 10px;
+    background-color: rgb(70, 56, 110);
+}
+.linkWrap{
+    background-color:rgb(25, 22, 36);
+    width: 88%;
+    height: 30px;
+    margin-top: 20px;
+    margin-left:auto ;
+    margin-right:auto ;
+    padding-left: 10px;
+    padding-top: 9px;
+}
