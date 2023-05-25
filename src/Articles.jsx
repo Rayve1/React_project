@@ -6,6 +6,7 @@ import { ThirdArticle } from "./ThirdArticle"
 
 function Articles(){
     return(
+
      
         <div className="nav articlesList">
         <span className="linkWrap"><a href="/FirstArticle">Статья 1</a></span>
