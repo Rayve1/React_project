@@ -1,12 +1,13 @@
 import React from "react";
-import { Route, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import { FirstArticle } from "./FirstArticle";
 import { SecondArticle } from "./SecondArticel"
 import { ThirdArticle } from "./ThirdArticle"
 
 function Articles(){
     return(
-        <div className="nav">
+     
+        <div className="nav articlesList">
         <span className="linkWrap"><a href="/FirstArticle">Статья 1</a></span>
         <span className="linkWrap"><a href="/SecondArticle">Статья 2</a></span>
         <span className="linkWrap"><a href="/ThirdArticle">Статья 3</a></span>
