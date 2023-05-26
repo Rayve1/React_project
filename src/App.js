@@ -1,5 +1,5 @@
-import React from "react";
-import {Routes, Route, Link} from "react-router-dom";
+import React, { Component, useEffect } from "react";
+import {Routes, Route, Link, json} from "react-router-dom";
 import {style} from "./style.css"
 import { Articles } from "./Articles";
 import { FirstArticle } from "./FirstArticle";
@@ -8,11 +8,12 @@ import { ThirdArticle } from "./ThirdArticle"
 
 
 function App() {
-  return (
-    <>      
 
+  return (
+    
+    <>      
       <div className="logo">
-        <p className="logo-text">LOGO</p>
+        <p className="logo-text">Logo</p>
       </div>
       <div className="nav">
             <span className="linkWrap">
@@ -39,9 +40,8 @@ function App() {
               <Route path="/ThirdArticle" element={<ThirdArticle/>} />
             </Routes>
             
-
     </>
   );
 }
-
+  
 export default App;
