@@ -1,24 +1,32 @@
-import React from "react";
-import {Route, Routes} from "react-router-dom";
-import { FirstArticle } from "./FirstArticle";
-import { SecondArticle } from "./SecondArticel"
-import { ThirdArticle } from "./ThirdArticle"
+import React , {useState, useEffect} from "react";
+import {Route, Routes, Link} from "react-router-dom";
+import {FirstArticle} from "./FirtstArticle"
 
 function Articles(){
-    return(
+  const [titles, setTitles] = useState([]);
+  
+  useEffect(() => {
+    fetch('https://dummyjson.com/post')
+      .then(res => res.json())
+      .then(data => {
+        const titles = data.posts.map(item => item.title);
+        setTitles(titles);   
+      });
+  }, [])
 
-     
-        <div className="nav articlesList">
-        <span className="linkWrap"><a href="/FirstArticle">Статья 1</a></span>
-        <span className="linkWrap"><a href="/SecondArticle">Статья 2</a></span>
-        <span className="linkWrap"><a href="/ThirdArticle">Статья 3</a></span>
-
-        <Routes>
-              <Route path="/FirstArticle" element={<FirstArticle/>} />
-              <Route path="/SecondArticle" element={<SecondArticle/>} />
-              <Route path="/ThirdArticle" element={<ThirdArticle/>} />
-        </Routes>
-      </div>
-    );
-};
+  return(
+    <div className="nav articlesList">
+      {
+        titles.map((title, index) => (
+          <span className="linkWrap" key={index}>
+            <a href={"/FirstArticle"}>{title}</a>
+          </span>
+        ))
+      }
+      <Routes>
+        <Route path="/FirstArticle" element={<FirstArticle/>} />
+      </Routes>
+    </div>
+  );
+} 
 export {Articles}; 

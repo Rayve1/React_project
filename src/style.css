@@ -24,14 +24,15 @@ a{
     display: flex;
     flex-direction: column;
     width: 400px;
-    height: 400px;
+    min-height: 420px;
     margin-top: 10px;
     background-color: rgb(67,60,79);
+    padding-bottom:20px ;
 }
 .linkWrap{
     background-color:rgb(18,30,49);
     width: 88%;
-    height: 30px;
+    min-height: 30px;
     margin-top: 20px;
     margin-left:auto ;
     margin-right:auto ;
@@ -39,7 +40,8 @@ a{
     padding-top: 9px;
 }
 .articlesList{
-    margin-top: -400px;
+    min-height: 400px;
+    margin-top: -440px;
 }
 .articleWrap{
     display: flex;
@@ -48,7 +50,7 @@ a{
     height: 400px;
     margin-top: 10px;
     background-color: rgb(67,60,79);
-    margin-top: -350px;
+    margin-top: -400px;
 }
 
 .articleParagraph{
@@ -86,12 +88,10 @@ a{
     color: white;
 }
 .banner{
-    position: absolute;
+    position: relative;
     background-color: rgb(67,60,79);
     width: 400px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
+    height: 120px;;
     margin-top: 60px;
 }
 .banner-text{

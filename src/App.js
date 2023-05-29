@@ -2,9 +2,7 @@ import React, { Component, useEffect ,useState } from "react";
 import {Routes, Route, Link, json} from "react-router-dom";
 import {style} from "./style.css"
 import { Articles } from "./Articles";
-import { FirstArticle } from "./FirstArticle";
-import { SecondArticle } from "./SecondArticel"
-import { ThirdArticle } from "./ThirdArticle"
+import { FirstArticle } from "./FirtstArticle";
 
 
 function App() {
@@ -26,19 +24,18 @@ function App() {
               <a href="/#">Игры </a>
             </span>
       </div>
-
+{/* 
       <div className="banner">
         <p className="banner-text">BANNER</p>
-      </div>
+      </div> */}
       
             <Routes>
                 <Route path="/Articles" element={<Articles/>}/>
             </Routes>
             <Routes>
-              <Route path="/FirstArticle" element={<FirstArticle/>} />
-              <Route path="/SecondArticle" element={<SecondArticle/>} />
-              <Route path="/ThirdArticle" element={<ThirdArticle/>} />
+                <Route path="/FirstArticle" element={<FirstArticle/>}/>
             </Routes>
+            
             
     </>
   );
