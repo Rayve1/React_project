@@ -1,15 +1,10 @@
 import React from "react";
 
-
-fetch('https://dummyjson.com/posts/3')
-.then(response => response.json())
-.then(json => {  const resultDiv = document.getElementById('result');
-resultDiv.innerHTML = JSON.stringify(json)})
-
 function ThirdArticle(){
     return(
         <div className="articleWrap nav">
-            <p className="articleParagraph" id="result"> Содержание статьи 3</p>
+                <h1 className="articleH1">Заголовок</h1>
+                <p className="articleParagraph" id="result">Содержание</p>
         </div>
     );
 };
