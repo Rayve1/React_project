@@ -1,12 +1,12 @@
 import React, { Component, useEffect ,useState } from "react";
-import {Routes, Route, Link, json} from "react-router-dom";
+import {Routes, Route, Link, useParams,} from "react-router-dom";
 import {style} from "./style.css"
 import { Articles } from "./Articles";
 import { FirstArticle } from "./FirtstArticle";
 
 
 function App() {
-
+  let {index} = useParams
   return (
     
     <>      
@@ -29,12 +29,12 @@ function App() {
         <p className="banner-text">BANNER</p>
       </div> */}
       
-            <Routes>
+            <Routes>         
                 <Route path="/Articles" element={<Articles/>}/>
+                <Route path="/FirstArticle/:id" element={<FirstArticle/>}></Route>     
+                <Route path="/FirstArticle" element={<FirstArticle/>}></Route>          
             </Routes>
-            <Routes>
-                <Route path="/FirstArticle" element={<FirstArticle/>}/>
-            </Routes>
+
             
             
     </>
