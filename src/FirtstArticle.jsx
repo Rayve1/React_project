@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from "react";
 import Articels from "./Articles"
-import { useParams } from "react-router-dom";
+import { useParams, Link, Route, Routes } from "react-router-dom";
 
 function FirstArticle(props) {
     const [article, setArticle] = useState();
@@ -21,12 +21,14 @@ function FirstArticle(props) {
   
     return (
       <div className="nav articlesList">
-      {
-          <span className="linkWrap">
+      { <>
             <h1 className="articleH1">{articleTitle}</h1>
              <p className="articleParagraph">{article}</p>
-          </span>
+        </>     
       }
+        <div className="linkWrap">
+          <Link to={"/Articles"}>назад</Link>
+        </div>
       </div>
     );
   }

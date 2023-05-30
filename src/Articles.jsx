@@ -15,7 +15,7 @@ function Articles(props){
   }, [])
 
   return(
-    <div className="nav articlesList">
+    <div className="nav articlesList"> 
       {
         titles.map((title, index) => (
           <span className="linkWrap" key={index = index + 1}>
