@@ -1,103 +1,199 @@
-body{
+body {
     margin-left: 39%;
 }
+
 .logo {
-    background-color: rgb(67,60,79);
+    background-color: rgb(67, 60, 79);
     width: 400px;
     height: 120px;
     display: flex;
     justify-content: center;
 }
-a{
-    text-decoration:none;
+
+a,
+.saperText {
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
-.logo-text{
-    font-size:50px;
+
+.logo-text {
+    font-size: 50px;
     margin-top: auto;
     margin-bottom: auto;
     color: white;
     font-family: monospace;
 }
-.nav{
+
+.nav {
     display: flex;
     flex-direction: column;
     width: 400px;
     min-height: 420px;
     margin-top: 10px;
-    background-color: rgb(67,60,79);
-    padding-bottom:20px ;
+    background-color: rgb(67, 60, 79);
+    padding-bottom: 20px;
 }
-.linkWrap{
-    background-color:rgb(18,30,49);
+
+.linkWrap {
+    background-color: rgb(18, 30, 49);
     width: 88%;
     min-height: 30px;
     margin-top: 20px;
-    margin-left:auto ;
-    margin-right:auto ;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 10px;
     padding-top: 9px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
-.articlesList{
+
+.articlesList {
     min-height: 400px;
-    margin-top: -440px;
 }
-.articleWrap{
+
+.articleWrap {
     display: flex;
     flex-direction: column;
     width: 400px;
     height: 400px;
     margin-top: 10px;
-    background-color: rgb(67,60,79);
+    background-color: rgb(67, 60, 79);
     margin-top: -400px;
 }
 
-.articleParagraph{
-    background-color: rgb(0,0,0);
-    text-decoration:none;
+.articleParagraph {
+    background-color: rgb(0, 0, 0);
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     width: 88%;
     height: 350px;
     margin-top: 0;
-    margin-left:auto ;
-    margin-right:auto ;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 10px;
     padding-top: 9px;
     margin-top: -22px;
-    
+
 }
-.articleH1{
+
+.articleH1 {
     font-size: 20px;
-    background-color: rgb(0,0,0);
-    text-decoration:none;
+    background-color: rgb(0, 0, 0);
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     width: 88%;
     height: 50px;
     margin-top: 20px;
-    margin-left:auto ;
-    margin-right:auto ;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 10px;
-    padding-top: 9px;;
+    padding-top: 9px;
+    ;
 }
-.back-text{
-    text-decoration:none;
+
+.back-text {
+    text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
-.banner{
+
+.banner {
     position: relative;
-    background-color: rgb(67,60,79);
+    background-color: rgb(67, 60, 79);
     width: 400px;
-    height: 120px;;
+    height: 120px;
+    ;
     margin-top: 60px;
 }
-.banner-text{
-    font-size:50px;
+
+.banner-text {
+    font-size: 50px;
     margin-top: auto;
     margin-bottom: auto;
     color: white;
     font-family: monospace;
+}
+
+.gamesBack {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40px;
+    width: 400px;
+    margin-top: 10px;
+    background-color: rgb(67, 60, 79);
+    padding-bottom: 20px;
+}
+
+.notificationBlock {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 88%;
+    min-height: 60px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-top: 9px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: yellow;
+    text-align: center;
+}
+.area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: black;
+    width: 88%;
+    height:400px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-top: 9px;
+}
+.gameItem, .gameItemwin, .gameItemlose, .gameItemAddedAttempt{
+    background-color: rgb(196, 196, 196);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.firstRow, .secondRow, .thirdRow, .fourthRow, .fifthRow {
+    display: flex;
+    justify-content: space-around;
+}
+.itemWin{
+    width: 50px;
+    height: 50px;
+    background-image: url("sprites/checkmark.png")!important;
+    background-size: cover!important;
+    pointer-events: none;
+
+}
+.itemLose{
+    width: 50px;
+    height: 50px;
+    background-image: url("sprites/close.png")!important;
+    background-size: cover!important;
+    pointer-events: none;
+}
+.itemAddedAttempt{
+    width: 50px;
+    height: 50px;
+    background-image: url("sprites/add.png")!important;
+    background-size: cover!important;
+    pointer-events: none;
 }
