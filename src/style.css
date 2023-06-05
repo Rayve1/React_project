@@ -175,7 +175,7 @@ a,
     display: flex;
     justify-content: space-around;
 }
-.itemWin{
+.win{
     width: 50px;
     height: 50px;
     background-image: url("sprites/checkmark.png")!important;
@@ -183,14 +183,14 @@ a,
     pointer-events: none;
 
 }
-.itemLose{
+.lose{
     width: 50px;
     height: 50px;
     background-image: url("sprites/close.png")!important;
     background-size: cover!important;
     pointer-events: none;
 }
-.itemAddedAttempt{
+.addedAttempt{
     width: 50px;
     height: 50px;
     background-image: url("sprites/add.png")!important;

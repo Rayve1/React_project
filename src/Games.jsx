@@ -10,44 +10,37 @@ class Game extends Component {
             count: 3
         }
         this.boxClass = ["","","","","","","","","","","","","","","","","","","","","","","","",""]
-        this.randomNumberForWin = Math.round(Math.random() * this.boxClass.length)
-        this.randomNumberForAddedAttempt = Math.round(Math.random() * this.boxClass.length - 1)
-        this.boxClass[this.randomNumberForWin] = "win"
-        this.boxClass[this.randomNumberForAddedAttempt] = "AddedAttempt"
-        this.disable = false
 
     }
 
     handleClick = (e) => {
+      document.querySelector(".notification").innerHTML = "открываем клетку c номером " + e.target.innerHTML
         setTimeout(() => {
-            console.log(this.boxClass)
+            let randomNumber = Math.random()
 
-            if(this.disable == false){
-                if (e.target.className == "gameItemwin"){
-                    document.querySelector(".notification").innerHTML = "ты победил!!!"
-                    e.target.className = "itemWin"
-                    this.handleClick = null
-                    e.target.innerHTML = ""
-                    this.disable = true
+            if(randomNumber <= 0.7){
+              e.target.className = "lose"
+              this.setState({ count: this.numberAttemps.count -= 1 })
+              document.querySelector(".notification").innerHTML = "неправильно, попробуй другую"
 
-                }else if(e.target.className == "gameItemAddedAttempt"){
-                    document.querySelector(".notification").innerHTML = "Тебе повезло, плюс 1 попытка"
-                    this.setState({ count: this.numberAttemps.count += 1 })
-                    e.target.className = "itemAddedAttempt"
-                    e.target.innerHTML = ""
+            }else if((randomNumber > 0.7) && (randomNumber <= 0.90)){
+              e.target.className = "addedAttempt"
+              document.querySelector(".notification").innerHTML = "Тебе повезло, плюс 1 попытка"
+              this.setState({ count: this.numberAttemps.count += 1 })
 
-                }else if((e.target.className !== "gameItemAddedAttempt") || (e.target.className !== "gameItemwin" )) { 
-                        this.setState({ count: this.numberAttemps.count -= 1 })
-                        document.querySelector(".notification").innerHTML = "неправильно, попробуй другую"
-                        e.target.className = "itemLose"
-                        e.target.innerHTML = ""
-                    }}
-            
-            if(this.numberAttemps.count === 0){
-                document.querySelector(".notification").innerHTML = "Ты проиграл, кончились попытки";
-                 this.handleClick = null 
+            }else if(randomNumber > 0.9){
+              this.setState({ count: this.numberAttemps.count += 1 })
+              e.target.className = "win"
+              this.handleClick = null
+              document.querySelector(".notification").innerHTML = "ты победил!!!"
+
             }
-        }, 1);
+            if(this.numberAttemps.count <= 0){
+              document.querySelector(".notification").innerHTML = "Ты проиграл, кончились попытки";
+              this.handleClick = null
+            }
+            
+        }, 2000);
     }
 
   render() {
