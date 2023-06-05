@@ -29,7 +29,7 @@ class Game extends Component {
               this.setState({ count: this.numberAttemps.count += 1 })
 
             }else if(randomNumber > 0.9){
-              this.setState({ count: this.numberAttemps.count += 1 })
+              this.setState({ count: this.numberAttemps.count += 0 })
               e.target.className = "win"
               this.handleClick = null
               document.querySelector(".notification").innerHTML = "ты победил!!!"
@@ -40,7 +40,7 @@ class Game extends Component {
               this.handleClick = null
             }
             
-        }, 2000);
+        }, 1);
     }
 
   render() {
